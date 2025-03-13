@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-55NDKMPMDH"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-55NDKMPMDH');
+	</script>
+
+  <meta charset="utf-8">
+  <meta name="description" content="Human Policy as Humanoid Policy">
+  <meta name="keywords" content="Legged Robot, Mobile Manipulation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Human Policy as Humanoid Policy</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
+  <script src="./static/js/isInViewport.min.js"></script>
+  <!-- <script defer src="./static/js/fontawesome.all.min.js"></script> -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./resources/favicon.ico">
+  
+  <script src="https://kit.fontawesome.com/006a5775d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="full-page-image">
+    <video id="bg-video" autoplay loop muted playsinline>
+        <source src="resources/full_screen.mp4" type="video/mp4">
+    </video>
+</div>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Related Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://robot-tv.github.io">
+              Open-TeleVision
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+             <span style="font-weight: normal;">Human Policy as Humanoid Policy
+          </h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://rogerqi.github.io/">Ri-Zhao Qiu*†</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://aaronyang1223.github.io/">Shiqi Yang*</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://chengxuxin.github.io/">Xuxin Cheng*†</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="">Chaitanya Chawla</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="">Jialong Li</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://tairanhe.com/">Tairan He</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+              <a href="https://geyan21.github.io/">Ge Yan</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="">David J. Yoon</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="">Ryan Hoque</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="">Lars Paulsen</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.episodeyang.com/">Ge Yang</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <br>
+              <a href="https://www.linkedin.com/in/jianzhangpurdue/">Jian Zhang</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://yswhynot.github.io/">Sha Yi</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://www.gshi.me/">Guanya Shi</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://xiaolonw.github.io/">Xiaolong Wang</a>
+              <br><br>
+              <img src="./resources/UCSanDiegoLogo-BlueGold.png" width="17%" style="margin-right: 70px;"></img>
+              <img src="./resources/cmu_ri_logo.png" width="17%" style="margin-right: 70px;"></img>
+              <img src="./resources/apple_logo.png" width="4%" style="margin-right: 70px;"></img>
+              <img src="./resources/uw_logo.png" width="5%" style="margin-right: 70px;"></img>
+              <img src="./resources/mit-logo.png" width="8%"></img><br><br>
+            </span>
+          </div>
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>YouTube</span>
+                </a>
+              </span>
+<!-- 
+			        <span class="link-block">
+                <a href=""
+                    class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <i class="fas fa-wrench"></i>
+                    </span>
+                    <span>Hardware</span>
+                </a>
+              </span> -->
+
+              <!-- <span class="link-block">
+                <a href="https://www.bilibili.com/"
+                    class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <i class="fab fa-bilibili"></i>
+                    </span>
+                    <span>Bilibili</span>
+                </a>
+              </span> -->
+              
+              <!-- <span class="link-block">
+                <a href="https://x.com/xuxin_cheng" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>Summary</span>
+                </a>
+              </span> -->
+
+              <span class="link-block">
+                <a href="" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section" style="padding-top: 0; padding-bottom: 0">
+  <div class="container">
+    <h4 style="text-align: center;">In Submission to XXX conference</h4>
+  </div>
+</section> -->
+
+<section class="section" style="padding-bottom: 0">
+  <div class="container">
+    <div id="method_video" class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds no-bottom-padding">
+        <center>
+          <video playsinline autoplay loop muted controls src="resources/website_teaser.mp4" width="100%" preload="metadata"
+            style="border-radius:10px;"></video>
+        </center>
+      </div>
+    </div>
+
+    <h4 style="text-align: center;"><b>Humanoid</b> (<i>adj.</i>): having human form or characteristics. &mdash; <i>Merriam-Webster, 2025</i>.</h4>
+  </div>
+</section>
+
+  <section class="section">
+    <div class="container">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-2">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Training manipulation policies for humanoid robots with diverse data enhance their robustness
+              and generalization across tasks and platforms. However, learning solely from robot demonstrations
+              is labor-intensive, requiring expensive tele-operated data collection which is difficult to
+              scale. This paper investigates a more scalable data source, egocentric human demonstrations,
+              to serve as cross-embodiment training data for robot learning. We mitigate the embodiment
+              gap between humanoids and humans from both the data and modeling perspectives. We collect
+              an egocentric <b>task-oriented</b> dataset (<b>PH2D</b>) that is directly
+              aligned with humanoid manipulation demonstrations. We then train a human-humanoid
+              behavior policy, which we term Human Action Transformer (<b>HAT</b>).
+              The state-action space of HAT is unified for both humans and humanoid robots
+              and can be differentiably retargeted to robot actions. Co-trained with smaller-scale
+              robot data, HAT directly models humanoid robots and humans as different embodiments
+              without additional supervision. We show that human data improves both generalization and
+              robustness of HAT with significantly better data collection efficiency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Collecting Human and Humanoid Demonstrations</h2>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                  <center>
+                    <h5>We developed Vision OS App and OpenTV to collect data with 3D hand gestures and diverse cameras.</h5>
+                    <img src="./resources/collection_hardware.png" width="50%"></img>
+                  </center>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                  <center>
+                    <h5>Scalable: we collected ~27k demonstrations with language annotations in dozens of hours.</h5>
+                  </center>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                  <center>
+                    <video playsinline autoplay loop muted controls src="resources/ph2d/projection_viz.mp4" width="100%"
+                      preload="metadata" style="border-radius:10px;"></video>
+                  </center>
+                </div>
+                <div class="col">
+                  <center>
+                    <img src="./resources/dataset_comp.jpg" width="100%"></img>
+                  </center>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                  <center>
+                    <h5>With diverse demonstrations, HAT performs human-humanoid <b>co-training without additional visual post-processing.</b><h5>
+                  </center>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Unified Human-Centric State-Action Space</h2>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                  <center>
+                    <h5>Our policy is <b>agnostic of robots</b> with a human-centric state-action representation, which can be retargeted to robots.</h5>
+                    <img src="./resources/hat_overview.jpg" width="65%"></img>
+                  </center>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                  <center>
+                    <h5>Robot Observations</h5>
+                    <video playsinline autoplay loop muted controls src="resources/h1_viz.mp4" width="100%"
+                      preload="metadata" style="border-radius:10px;"></video>
+                  </center>
+                </div>
+                <div class="col">
+                  <center>
+                    <h5>Human Observations</h5>
+                    <video playsinline autoplay loop muted controls src="resources/human_viz.mp4" width="100%"
+                      preload="metadata" style="border-radius:10px;"></video>
+                  </center>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Human-Humanoid Co-training Improves Generalizabilty</h2>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col">
+                    <h3>Few-shot Cross-Humanoid Generalization</h3>
+                </div>
+              </div>
+              <br>
+
+              <div class="row">
+                <div class="col">
+                    <h5>20 CMU demos</h5>
+                    <video autoplay muted loop playsinline controls src="resources/cmu_h1/cmu_only_pepsi.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+
+                </div>
+                <div class="col">
+                  <h5>Co-trained with human data</h5>
+                  <video autoplay muted loop playsinline controls src="resources/cmu_h1/cmu_mixed.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+
+                </div>
+              </div>
+
+              <br>
+
+              <div class="row">
+                <div class="col">
+                    <h3>Object Generalization</h3>
+                    <h5>Seen in robot data: blue pepsi bottle</h5>
+                    <video autoplay muted loop playsinline controls src="./resources/ucsd_h1/grasping_pepsi.mp4" width="50%"
+                           style="border-radius:10px; "></video>
+
+                </div>
+              </div>
+              <br>
+
+              <div class="row">
+                <div class="col">
+                    <h5>Seen in human data: red coke can</h5>
+                    <video autoplay muted loop playsinline controls src="resources/ucsd_h1/grasping_red_coke.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+
+                </div>
+                <div class="col">
+                  <h5>Seen in human data: ZED camera box</h5>
+                  <video autoplay muted loop playsinline controls src="resources/ucsd_h1/grasping_zed_box.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+
+                </div>
+                <div class="col">
+                  <h5>Seen in human data: cardboard box</h5>
+                  <video autoplay muted loop playsinline controls src="resources/ucsd_h1/grasping_cardboard_box.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+
+                </div>
+              </div>
+
+              <br>
+
+              <div class="row">
+                <div class="col">
+                    <h3>Object Placement Generalization</h3>
+                </div>
+              </div>
+              <br>
+
+              <div class="row">
+                <div class="col">
+                    <h5><em>Baseline</em>: Trained on 60 robot demos (50 picking right, 10 picking left)</h5>
+                    <video autoplay muted loop playsinline controls src="resources/ucsd_h1/vgrasping_baseline.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+
+                </div>
+                <div class="col">
+                  <h5><em>Ours</em>: co-trained with human data with diverse placements</h5>
+                  <video autoplay muted loop playsinline controls src="resources/ucsd_h1/vgrasping_cotrained.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+
+                </div>
+              </div>
+
+              <br>
+
+              <div class="row">
+                <div class="col">
+                    <h3>Background Generalization</h3>
+                    <h5>Seen in robot data: colored paper background</h5>
+                    <video autoplay muted loop playsinline controls src="./resources/ucsd_h1/cup_passing_paper.mp4" width="50%"
+                           style="border-radius:10px; "></video>
+
+                </div>
+              </div>
+              <br>
+
+              <div class="row">
+                <div class="col">
+                    <h5>Seen in human data: red cardboard</h5>
+                    <video autoplay muted loop playsinline controls src="resources/ucsd_h1/cup_passing_red.mp4" width="100%"
+                           style="border-radius:10px; "></video>
+
+                </div>
+                <div class="col">
+                  <h5>Seen in human data: wooden table</h5>
+                  <video autoplay muted loop playsinline controls src="resources/ucsd_h1/cup_passing_wood.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+
+                </div>
+                <div class="col">
+                  <h5>Seen in human data: green cardboard</h5>
+                  <video autoplay muted loop playsinline controls src="resources/ucsd_h1/cup_passing_green.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+
+                </div>
+              </div>
+
+              </div>
+            </div>
+            </td>
+          </tr>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="titile">BibTeX</h2>
+<pre><code>
+@article{,
+title={},
+author={},
+journal={},
+year={}
+}
+</code></pre>
+  </div>
+</section>
+
+
+</body>
+
+<script>
+  var mainLoopId = setInterval(function(){
+        $('video').not('#teaser').each(function(){
+      if ($(this).is(":in-viewport")) {
+          $(this)[0].play();
+      } else {
+          $(this)[0].pause();
+      }
+      })
+    },200);
+</script>
+
+</html>
