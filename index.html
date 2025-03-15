@@ -46,7 +46,7 @@
     <video id="bg-video" autoplay loop muted playsinline>
         <source src="resources/full_screen.mp4" type="video/mp4">
     </video>
-</div>
+  </div>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -478,17 +478,5 @@ year={}
 
 
 </body>
-
-<script>
-  var mainLoopId = setInterval(function(){
-        $('video').not('#teaser').each(function(){
-      if ($(this).is(":in-viewport")) {
-          $(this)[0].play();
-      } else {
-          $(this)[0].pause();
-      }
-      })
-    },200);
-</script>
 
 </html>
